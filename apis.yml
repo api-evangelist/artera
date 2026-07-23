@@ -1,8 +1,33 @@
 aid: artera
 name: Artera
-description: Artera is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Artera is a healthcare technology company providing an AI-powered patient
+  communication and engagement platform used by hospitals, health systems, and
+  medical practices to unify how they reach and care for patients. The platform
+  orchestrates SMS, voice, email, and chat across the patient journey —
+  appointment scheduling and reminders, patient intake, payments, referral
+  management, care-gap closure, prescription refills, multilingual engagement,
+  and after-hours call routing and triage — increasingly through agentic AI.
+  Artera connects to the EHR and patient-facing vendors via API, FHIR, and
+  HL7v2 integrations with major systems including Epic, Oracle Health, MEDITECH,
+  athenahealth, eClinicalWorks, Veradigm, NextGen, Greenway, ModMed, AdvancedMD,
+  and Netsmart. The company maintains a strong security and compliance posture
+  (SOC 2 Type 2, HITRUST, ISO 27001/27017/27018/27701, FedRAMP, HIPAA). It was
+  surfaced as a Techstars portfolio company and added to the API Evangelist
+  network.
 url: https://raw.githubusercontent.com/api-evangelist/artera/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://artera.io/wp-content/uploads/2024/03/cropped-favicon-300x300.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +36,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Healthcare
+- Patient Communication
+- Patient Engagement
+- Health IT
+- EHR Integration
+- FHIR
+- Agentic AI
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +55,28 @@ maintainers:
 common:
 - type: Website
   url: https://artera.io/
+- type: Blog
+  url: https://artera.io/blog/
+- type: Integrations
+  url: https://artera.io/integrations/
+- type: Support
+  url: https://artera.io/contact-us/
+- type: TermsOfService
+  url: https://artera.io/terms-of-service/
+- type: PrivacyPolicy
+  url: https://artera.io/privacy-policy/
+- type: TrustCenter
+  url: https://safebase.artera.io/
+- type: Compliance
+  url: https://artera.io/trust-center/
+- type: Security
+  url: https://artera.io/vulnerability-disclosure/
+- type: VulnerabilityDisclosure
+  url: security/artera-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/artera-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

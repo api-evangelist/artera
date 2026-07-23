@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+probe: false
+source: https://artera.io/trust-center/
+url: https://safebase.artera.io/
+platform: SafeBase
+certifications:
+- SOC 2 Type 2
+- HITRUST
+- ISO 27001
+- ISO 27017
+- ISO 27018
+- ISO 27701
+- FedRAMP
+compliance:
+- HIPAA
+- TCPA
+auditors:
+- Schellman
+- BDO
+- Cobalt
+- Coalfire
+evidence:
+- source: https://artera.io/trust-center/
+  keywords:
+  - trust center
+  - hitrust
+  - iso 27001
+  - soc 2
+  - fedramp
+- source: https://safebase.artera.io/
+  keywords:
+  - soc 2 type 2
+  - iso 27701
+  - fedramp certified

@@ -46,7 +46,72 @@ tags:
 - EHR Integration
 - FHIR
 - Agentic AI
-apis: []
+apis:
+- name: Artera Messaging API (MAPI)
+  description: >-
+    Artera's outbound SMS API, marketed to health systems and Artera Marketplace
+    vendors as the SendMessage API. It sends real-time text messages to patients
+    from the health system's trusted Artera number, authenticated with OAuth 2.0
+    plus an API key and restricted by IP allowlist. It optionally returns a
+    Deliverability Webhook carrying the message status (received, sent, delivered,
+    undelivered, failed) and a Patient Response Webhook when a patient replies
+    through the Secure Messaging Portal. MAPI is SMS-only — not voice or email —
+    delivers immediately with no advance scheduling, permits and auto-shortens
+    URLs, and deliberately does NOT apply Artera's TCPA quiet-hours or Holiday
+    Hours adjustments, leaving send-time compliance to the caller. The full
+    specification is published only inside Artera's registration-gated developer
+    portal.
+  humanURL: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+  baseURL: https://api.artera.io
+  tags:
+  - Messaging
+  - SMS
+  - Patient Communication
+  - Healthcare
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+  - type: APIReference
+    url: https://apidocs.artera.io/docs/0dbfeef0-de7e-4dee-8435-09c5cffd7ed1/specification
+  - type: DeveloperPortal
+    url: https://apidocs.artera.io/login
+  - type: Webhooks
+    url: asyncapi/artera-webhooks.yml
+  - type: Authentication
+    url: authentication/artera-authentication.yml
+  - type: ErrorCatalog
+    url: errors/artera-problem-types.yml
+  - type: StatusPage
+    url: https://status.artera.io/
+- name: Artera Extended Data API
+  description: >-
+    A Marketplace-vendor API that attaches custom partner content to a patient's
+    upcoming or past appointment or encounter, including post-discharge content.
+    Vendors call Artera with Appointment and/or Encounter IDs that must match the
+    EMR records already stored in Artera, together with the corresponding Location
+    ID, and the supplied content is rendered into Artera messages through named
+    Smart Phrase tokens — {eventPartnerPreCheckIn}, {eventPartnerPostApptRx},
+    {eventPartnerRescheduling}, {eventPartnerTelehealth}, {eventPartnerCheckIn} for
+    appointments and {dischargePartnerRx} for encounters. The tokens can be used in
+    manual messages, Quick Responses, Triggers, Conversation Flows and Broadcasts;
+    missing data renders blank and the message still sends. Specification access
+    requires developer-portal registration.
+  humanURL: https://knowledge.artera.io/en_US/marketplace/extended-data-api-appointments-and-encounters
+  baseURL: https://api.artera.io
+  tags:
+  - Appointments
+  - Encounters
+  - Healthcare
+  - Marketplace
+  - Patient Engagement
+  properties:
+  - type: Documentation
+    url: https://knowledge.artera.io/en_US/marketplace/extended-data-api-appointments-and-encounters
+  - type: DeveloperPortal
+    url: https://apidocs.artera.io/login
+  - type: Authentication
+    url: authentication/artera-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -75,8 +140,77 @@ common:
   url: security/artera-vulnerability-disclosure.yml
 - type: DomainSecurity
   url: security/artera-domain-security.yml
+- type: Documentation
+  url: https://knowledge.artera.io/
+- type: DeveloperPortal
+  url: https://apidocs.artera.io/login
+- type: APIReference
+  url: https://apidocs.artera.io/docs/0dbfeef0-de7e-4dee-8435-09c5cffd7ed1/specification
+- type: GettingStarted
+  url: https://knowledge.artera.io/en_US/get-started
+- type: HelpCenter
+  url: https://support.wellapp.com/s/
+- type: StatusPage
+  url: https://status.artera.io/
+- type: ChangeLog
+  url: changelog/artera-changelog.yml
+- type: ReleaseNotes
+  url: https://knowledge.artera.io/en_US/release-notes/2026-releases
+- type: Deprecation
+  url: lifecycle/artera-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/artera-lifecycle.yml
+- type: Authentication
+  url: authentication/artera-authentication.yml
+- type: Conventions
+  url: conventions/artera-conventions.yml
+- type: ErrorCatalog
+  url: errors/artera-problem-types.yml
+- type: Webhooks
+  url: asyncapi/artera-webhooks.yml
+- type: Conformance
+  url: conformance/artera-conformance.yml
+- type: Sandbox
+  url: sandbox/artera-sandbox.yml
+- type: Plans
+  url: plans/artera-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/artera-rate-limits.yml
+- type: Packages
+  url: packages/artera-packages.yml
+- type: LLMsTxt
+  url: llms/artera-llms.txt
+- type: SignUp
+  url: https://artera.io/request-a-demo/
+- type: Login
+  url: https://app.wellapp.com/login
+- type: TechnicalSpecifications
+  url: https://knowledge.artera.io/en_US/technical-specifications/1239793-technical-specifications
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-15'
+  status: minimal
+  artifacts_added: 14
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    Artera runs a real API program — a Messaging API (MAPI) and an Extended Data
+    API, both named in its public knowledge base and monitored as "SendMessage
+    API" on its status page — but every specification sits behind account
+    registration at apidocs.artera.io, whose own TLS certificate expired
+    2026-01-27, so the documented portal link fails certificate validation and
+    only resolves over plain http to an SPA that returns the same HTML shell for
+    /openapi.json as for every other path.
+  evidence:
+  - url: https://apidocs.artera.io/docs/0dbfeef0-de7e-4dee-8435-09c5cffd7ed1/specification
+    status: 000
+  - url: https://apidocs.artera.app/openapi.json
+    status: 200
+  - url: https://api.artera.io/openapi.json
+    status: 404
+  - url: https://api.artera.io/health
+    status: 200
+  - url: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+    status: 200
+  checked: '2026-08-15'

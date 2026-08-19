@@ -1,0 +1,37 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+note: >-
+  Artera publishes no API rate limits. The MAPI documentation states throughput
+  constraints only in prose about message behaviour (real-time send, no
+  scheduling, no merged messaging) and never gives a request ceiling, a window, a
+  burst allowance, response headers, or a 429 contract. An honest zero: the limits
+  may exist inside the registration-gated developer portal, but no agent or
+  integrator can read them from the public surface.
+limit_count: 0
+limits: []
+response_headers:
+  ratelimit_standard: null
+  x_ratelimit: null
+  retry_after: null
+  observed: false
+  note: >-
+    No unauthenticated API response is available to observe headers on.
+    GET https://api.artera.io/health returns 200 with no rate-limit headers
+    (only x-powered-by, vary, cache-control, etag, x-envoy-upstream-service-time).
+status_on_exhaustion: null
+related_but_not_api_limits:
+- item: Login attempt rate-limiting with countdown timer
+  scope: Artera web application sign-in, not the API
+  date: '2026-08-04'
+  source: https://knowledge.artera.io/en_US/release-notes/2026-releases
+evidence:
+- url: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+  status: 200
+  note: MAPI reference page — no rate limits stated
+- url: https://api.artera.io/health
+  status: 200
+  note: only unauthenticated endpoint reachable; no rate-limit headers returned
+- url: https://apidocs.artera.io/login
+  status: 200
+  note: developer portal is registration-gated; any published limits are behind it

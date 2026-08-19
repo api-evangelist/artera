@@ -1,0 +1,57 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+spec_type: none
+note: >-
+  Artera publishes no AsyncAPI document. It does document a real webhook surface
+  on the Messaging API (MAPI) in its public knowledge base, captured here. The
+  payload schemas are not published publicly — they live in the registration-gated
+  developer portal at https://apidocs.artera.io/login — so only the delivery
+  statuses and trigger semantics Artera states publicly are recorded. Nothing here
+  is inferred.
+event_surface:
+  transport: http-webhook
+  direction: outbound
+  api: Artera Messaging API (MAPI)
+  configuration: >-
+    Webhook delivery is an opt-in configured with Artera during implementation;
+    the customer supplies IP addresses and API keys.
+webhooks:
+- name: Deliverability Webhook
+  description: >-
+    Optional callback returning the delivery status of an outbound SMS sent
+    through MAPI.
+  optional: true
+  statuses:
+  - received
+  - sent
+  - delivered
+  - undelivered
+  - failed
+  payload_schema: null
+  payload_schema_note: published only inside the registration-gated developer portal
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+- name: Patient Response Webhook
+  description: >-
+    Fired when a patient replies to a Secure Message through the Artera Secure
+    Messaging Portal.
+  optional: true
+  trigger: patient reply via Secure Messaging Portal
+  payload_schema: null
+  payload_schema_note: published only inside the registration-gated developer portal
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+non_webhook_event_surfaces:
+- name: HL7v2 appointment status writeback
+  kind: hl7v2-interface
+  description: >-
+    Bidirectional HL7v2 interface writing appointment status changes back to the
+    EHR. A real event-bearing integration surface, but HL7v2 messaging, not an
+    HTTP webhook.
+  source: https://knowledge.artera.io/en_US/artera-foundation/hl7-appointment-status-writeback-specifications
+- name: Orders (ORM) and Recalls HL7 interfaces
+  kind: hl7v2-interface
+  source: https://knowledge.artera.io/en_US/artera-specific-features/1623978-orders-orm
+coverage:
+  asyncapi_published: false
+  webhooks_documented: 2
+  payload_schemas_public: 0

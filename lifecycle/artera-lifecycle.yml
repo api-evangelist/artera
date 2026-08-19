@@ -1,0 +1,83 @@
+generated: '2026-08-15'
+method: searched
+source: https://status.artera.io/
+note: >-
+  Versioning and deprecation policy are captured from Artera's public release
+  notes and status page. Artera publishes no API versioning scheme and no formal
+  API deprecation policy; the deprecations recorded below are product/URL
+  deprecations announced in the dated release notes, which is what Artera
+  actually publishes.
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: >-
+    No API version string appears anywhere in Artera's public documentation. The
+    developer-portal specification is addressed by an opaque UUID
+    (0dbfeef0-de7e-4dee-8435-09c5cffd7ed1), not a version.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  formal_api_policy: false
+  announced_via: dated release notes
+  release_notes: https://knowledge.artera.io/en_US/release-notes/2026-releases
+  observed_deprecations:
+  - item: Legacy Inbox URLs
+    date: '2026-03-03'
+    replacement: https://app.wellapp.com/inbox/all-messages
+    source: https://knowledge.artera.io/en_US/release-notes/2026-releases
+  - item: Legacy mass-messaging short code 81906
+    date: '2026-06-22'
+    replacement: '+1 (833) 868-5302 toll-free'
+    source: https://knowledge.artera.io/en_US/release-notes/2026-releases
+sla:
+  url: null
+  uptime_target: null
+  note: no public SLA or uptime commitment published
+status_page:
+  url: https://status.artera.io/
+  platform: Atlassian Statuspage
+  machine_readable: https://status.artera.io/api/v2/summary.json
+  probed_status: 200
+  current_indicator: none
+  current_description: All Systems Operational
+  regions:
+  - USA
+  - CANADA
+  api_components:
+  - name: SendMessage API
+    region: USA - Messaging
+    status: operational
+  - name: SendMessage API
+    region: CANADA - Messaging
+    status: operational
+  - name: System Integrations and Interface
+    status: operational
+  - name: Single Sign On (SSO) and Multi-Factor Authentication (MFA)
+    status: operational
+  - name: Vendors and Partners
+    status: operational
+  note: >-
+    The status page independently confirms the Messaging API as a first-class,
+    separately monitored production component in both the US and Canadian
+    deployments.
+deprecated_operations: []
+release_notes:
+  current: https://knowledge.artera.io/en_US/release-notes/2026-releases
+  archive:
+  - https://knowledge.artera.io/en_US/release-notes/2025-releases
+  - https://knowledge.artera.io/en_US/release-notes/2024-releases
+  - https://knowledge.artera.io/en_US/release-notes/2023releases
+  - https://knowledge.artera.io/en_US/release-notes/2022-releases
+  federal_edition:
+  - https://knowledge.artera.io/en_US/release-notes-artera-harmony-federal-edition/2026-releases-artera-harmony-federal-edition
+  - https://knowledge.artera.io/en_US/release-notes-artera-harmony-federal-edition/2025-artera-harmony-federal-editon
+certificate_hygiene:
+  finding: >-
+    The advertised developer-portal host apidocs.artera.io serves a TLS
+    certificate that EXPIRED 2026-01-27 (GoDaddy CN=apidocs.artera.io, valid
+    2025-01-27 to 2026-01-27). Every HTTPS request to the URL Artera prints in its
+    own knowledge base fails certificate validation; only a plain-http request,
+    which redirects to apidocs.artera.app, reaches the portal.
+    Detail in security/artera-domain-security.yml.
+  checked: '2026-08-15'

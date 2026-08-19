@@ -1,12 +1,44 @@
-generated: '2026-07-18'
+generated: '2026-08-15'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
 - host: artera.io
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep 12 22:30:07 2026 GMT
+  cert_expires: Nov 10 23:16:08 2026 GMT
   hsts: false
+- host: knowledge.artera.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 10 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 2592000
+- host: api.artera.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 26 17:18:42 2026 GMT
+  hsts: null
+- host: apidocs.artera.io
+  https: false
+  tls_version: null
+  cert_expires: Jan 27 16:11:27 2026 GMT
+  cert_expired: true
+  cert_subject: CN=apidocs.artera.io
+  cert_issuer: Go Daddy Secure Certificate Authority - G2
+  cert_valid_from: Jan 27 16:11:27 2025 GMT
+  hsts: null
+  finding: >-
+    EXPIRED TLS CERTIFICATE. This is the developer-portal host Artera prints in
+    its own public knowledge base
+    (https://apidocs.artera.io/docs/0dbfeef0-de7e-4dee-8435-09c5cffd7ed1/specification
+    and https://apidocs.artera.io/login). Every HTTPS request fails certificate
+    validation with "certificate has expired"; the certificate lapsed 2026-01-27,
+    roughly 6.5 months before this probe. The portal is reachable only over plain
+    http://, which then redirects to https://apidocs.artera.app/docs. A developer
+    following Artera's documented link in a browser or any TLS-validating client
+    hits a certificate error on the front door of the API program.
+  probed: '2026-08-15'
+  method: openssl s_client
 domains:
 - domain: artera.io
   dnssec: false

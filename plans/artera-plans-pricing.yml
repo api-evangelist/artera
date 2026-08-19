@@ -1,0 +1,27 @@
+generated: '2026-08-15'
+method: searched
+source: https://artera.io/
+note: >-
+  Artera publishes no pricing of any kind. https://artera.io/pricing/ returns HTTP
+  404 and no plan, tier, quota or per-message rate appears anywhere on the public
+  site, in the knowledge base, or in the marketplace pages. Artera sells
+  enterprise health-system contracts through a demo request and a Customer Success
+  motion. plan_count is an honest zero, not an unchecked field.
+plan_count: 0
+plans: []
+pricing_model: enterprise-contract
+public_pricing: false
+sales_motion:
+  request_demo: https://artera.io/request-a-demo/
+  contact: https://artera.io/contact-us/
+  note: >-
+    MAPI and Extended Data API access is arranged through a Customer Success
+    Representative during implementation; there is no self-serve purchase path.
+evidence:
+- url: https://artera.io/pricing/
+  status: 404
+- url: https://artera.io/request-a-demo/
+  status: 200
+- url: https://artera.io/marketplace/
+  status: 200
+  note: lists 30+ partner vendors, no pricing

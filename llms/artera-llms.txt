@@ -1,0 +1,119 @@
+# artera.io
+
+> Artera is a patient communication platform that helps healthcare providers automate outreach and reduce administrative burden.
+
+## Discovery Files
+
+- [Full Page Index](https://artera.io/llms-full.txt): Complete list of all crawlable pages.
+- [Deep Context](https://artera.io/llms-context.md): Detailed topical and structural overview of this site.
+
+Generated: 2026-06-08
+
+## Overview
+
+- [Home](https://artera.io/): Overview of Artera’s AI-driven healthcare communication platform.
+
+## Help & Support
+
+- [Support](https://artera.io/support): Customer support resources and help center access.
+
+## Blog
+
+- [Blog](https://artera.io/blog): Articles and updates on healthcare AI and operational improvements.
+- [Agentic Ai For Healthcare](https://artera.io/blog/agentic-ai-for-healthcare): Discussion on adopting agentic AI solutions in healthcare systems.
+- [Patient Segmentation](https://artera.io/blog/patient-segmentation): Frameworks and examples for effective patient segmentation in healthcare.
+- [First Call Resolution In Healthcare](https://artera.io/blog/first-call-resolution-in-healthcare): How AI improves first call resolution rates in healthcare.
+- [Personalized Care Experiences](https://artera.io/blog/personalized-care-experiences): Strategies for delivering personalized patient care effectively.
+- [Voice Ai Agents Healthcare](https://artera.io/blog/voice-ai-agents-healthcare): Key performance metrics for AI voice agents in healthcare.
+- [Best In Klas](https://artera.io/blog/best-in-klas): Announcement of Artera’s recognition as Best in KLAS for 2026.
+- [Ai Agents For Patient Communications Himss Recap](https://artera.io/blog/ai-agents-for-patient-communications-himss-recap): Recap of HIMSS session on AI agents for patient communications.
+
+## News
+
+- [News](https://artera.io/news): Artera’s company news and industry announcements.
+- [Artera Achieves Fedramp Class D Certification For Artera Harmony Federal Edition](https://artera.io/news/artera-achieves-fedramp-class-d-certification-for-artera-harmony-federal-edition): Announcement of FedRAMP Class D certification for Artera Harmony Federal.
+- [Artera Announces Ai Services Model](https://artera.io/news/artera-announces-ai-services-model): Details on Artera’s new AI services delivery model.
+- [Atlantic Health Expands Colonoscopy Prep With Ai](https://artera.io/news/atlantic-health-expands-colonoscopy-prep-with-ai): News about Atlantic Health expanding AI-powered colonoscopy prep.
+- [Atlantic Health Taps Arteras Ai Agents To Close Gaps In Colonoscopy Care](https://artera.io/news/atlantic-health-taps-arteras-ai-agents-to-close-gaps-in-colonoscopy-care): Atlantic Health utilizes Artera AI agents to improve colonoscopy care.
+- [Atlantic Health Partners With Artera To Improve Colonoscopy Outreach](https://artera.io/news/atlantic-health-partners-with-artera-to-improve-colonoscopy-outreach): Partnership announcement to enhance colonoscopy patient outreach.
+- [Atlantic Health To Deploy Arteras Ai Agents For Colonoscopy Patient Outreach](https://artera.io/news/atlantic-health-to-deploy-arteras-ai-agents-for-colonoscopy-patient-outreach): Atlantic Health plans AI agent deployment for colonoscopy outreach.
+- [Atlantic Health Uses Arteras Ai Agents](https://artera.io/news/atlantic-health-uses-arteras-ai-agents): Coverage of Atlantic Health’s use of Artera AI agents.
+
+## Resources
+
+- [Resources](https://artera.io/resources): Insights and best practices to improve patient experience and engagement.
+
+## Integrations
+
+- [Integrations](https://artera.io/integrations): Details on Artera’s platform integrations with healthcare systems.
+
+## Company
+
+- [Company](https://artera.io/company): Information about Artera’s mission, team, and company overview.
+
+## Customer Stories
+
+- [Customer Stories](https://artera.io/customer-stories): Case studies and testimonials from Artera’s customers.
+
+## Newsroom
+
+- [Newsroom](https://artera.io/newsroom): Latest news, announcements, and updates about Artera.
+
+## Contact Us
+
+- [Contact Us](https://artera.io/contact-us): Contact information and support resources for Artera.
+
+## Request A Demo
+
+- [Request A Demo](https://artera.io/request-a-demo): Form to request a personalized demonstration of Artera’s platform.
+
+## Talk To Sales
+
+- [Talk To Sales](https://artera.io/talk-to-sales): Contact page to connect with Artera’s sales team.
+
+## Request A Demo Capterra
+
+- [Request A Demo Capterra](https://artera.io/request-a-demo-capterra): Demo request form linked from Capterra platform.
+
+## Resource Org Size
+
+- [Health Systems](https://artera.io/resource-org-size/health-systems): Resources tailored for large health system organizations.
+- [Physician Practices](https://artera.io/resource-org-size/physician-practices): Resources targeted at physician practices of varying sizes.
+- [Fqhc](https://artera.io/resource-org-size/fqhc): Specialized resources for Federally Qualified Health Centers (FQHC).
+- [Patients](https://artera.io/resource-org-size/patients): Patient-focused resources and information.
+
+## Resource Practice Type
+
+- [Health Systems](https://artera.io/resource-practice-type/health-systems): Resources specific to health system practice types.
+- [Orthopedics](https://artera.io/resource-practice-type/orthopedics): Resources dedicated to orthopedic healthcare practices.
+- [Fqhc Chc](https://artera.io/resource-practice-type/fqhc-chc): Resources relevant for FQHC and Community Health Centers.
+
+## Resource Region
+
+- [West](https://artera.io/resource-region/west): Resources tailored for healthcare providers in the Western US region.
+- [Northeast](https://artera.io/resource-region/northeast): Healthcare resources focused on the Northeastern United States.
+- [Southeast](https://artera.io/resource-region/southeast): Resources for healthcare organizations in the Southeastern US region.
+- [Midwest](https://artera.io/resource-region/midwest): Healthcare resources for providers in the Midwest region.
+- [East](https://artera.io/resource-region/east): Region-specific healthcare resources for the Eastern US.
+
+## Resource Category
+
+- [Case Studies](https://artera.io/resource-category/case-studies): Collection of case studies showcasing Artera’s solutions.
+- [White Papers](https://artera.io/resource-category/white-papers): White papers on healthcare AI and patient communication topics.
+- [Product Datasheets](https://artera.io/resource-category/product-datasheets): Technical datasheets detailing Artera’s products and features.
+- [Videos](https://artera.io/resource-category/videos): Video content related to Artera’s platform and healthcare AI.
+- [Redefining The Patient Experience](https://artera.io/resource-category/redefining-the-patient-experience): Resources focused on transforming the patient experience.
+- [Conversational Messaging](https://artera.io/resource-category/conversational-messaging): Resources about conversational messaging technologies in healthcare.
+- [Vive 2024](https://artera.io/resource-category/vive-2024): Content related to the Vive 2024 healthcare event or series.
+- [Guide](https://artera.io/resource-category/white-papers/guide): Guides in white paper format on healthcare technology topics.
+
+## News Category
+
+- [Stories](https://artera.io/news-category/stories): Artera news stories highlighting successes and developments.
+- [Announcements](https://artera.io/news-category/announcements): Official announcements and press releases from Artera.
+- [In The News](https://artera.io/news-category/in-the-news): External media coverage and news mentions of Artera.
+- [News Announcements](https://artera.io/news-category/news-announcements): Latest news and formal announcements from the company.
+
+## Ai Agents In Healthcare
+
+- [Ai Agents In Healthcare](https://artera.io/ai-agents-in-healthcare): Information on the use of AI agents within healthcare settings.

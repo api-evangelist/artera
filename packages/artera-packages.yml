@@ -1,0 +1,47 @@
+generated: '2026-08-15'
+method: searched
+source: registry lookups on npm, PyPI, RubyGems, crates.io, NuGet, Maven Central, pkg.go.dev
+note: >-
+  Artera publishes no client libraries. Every registry probe missed, and there is
+  no first-party GitHub organization to derive candidates from. No SDKs pointer is
+  emitted in apis.yml — sdk_count is a genuine zero. Integrators are expected to
+  call MAPI over plain HTTP with credentials issued during implementation.
+package_count: 0
+packages: []
+registry_probes:
+- registry: npm
+  query: artera
+  status: 404
+- registry: npm
+  query: '@artera/sdk'
+  status: 404
+- registry: npm
+  query: artera-sdk
+  status: 404
+- registry: npm
+  query: keyword search "artera health"
+  status: 200
+  result: no first-party package; all hits are unrelated health-check libraries
+- registry: pypi
+  query: artera
+  status: 404
+- registry: pypi
+  query: artera-sdk
+  status: 404
+source_control:
+  github_org: null
+  note: >-
+    github.com/artera EXISTS but belongs to a different company — "DHH Switzerland
+    SA", located in Switzerland, blog https://www.artera.net/en/, org created
+    2010-06-30. It is NOT Artera the US healthcare patient-communication company
+    and is deliberately not recorded as this provider's GitHub organization. No
+    GitHubOrganization pointer is emitted.
+  rejected_candidate:
+    url: https://github.com/artera
+    reason: name collision — DHH Switzerland SA, unrelated company
+    checked: '2026-08-15'
+distribution:
+  method: none
+  note: >-
+    No CDN-distributed component library, no embeddable web component, and no CLI
+    were found on any Artera host or in the public documentation.

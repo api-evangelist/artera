@@ -1,0 +1,43 @@
+generated: '2026-08-15'
+method: searched
+status: not-public
+source: https://artera.io/blog/model-context-protocol-explanation/
+note: >-
+  Artera operates an MCP server but states in its own engineering blog that it is
+  deliberately NOT reachable from the public internet. No MCPServer pointer is
+  wired into apis.yml: an agent cannot call this surface, and asserting a pointer
+  would credit Artera with an agent surface no client can reach. This artifact
+  records the provider's own published statement, not a derived candidate — there
+  is no OpenAPI in this repo to derive a candidate tool list from.
+provider_statement:
+  quote: >-
+    our MCP server operates within a controlled environment, accessible only to
+    authorized agents, rather than being publicly available on the internet
+  source: https://artera.io/blog/model-context-protocol-explanation/
+  fetched: '2026-08-15'
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+probes:
+- url: https://mcp.artera.io/
+  status: 000
+  note: DNS does not resolve
+- url: https://mcp.artera.io/mcp
+  status: 000
+  note: DNS does not resolve
+- url: https://artera.io/mcp
+  status: 200
+  note: marketing resource page (redirects to /resource/mcp-explained-healthcare-providers/), not an MCP endpoint
+tools: []
+context:
+  public_positioning: >-
+    Artera markets MCP heavily (HIMSS26 fireside chat, multiple 2026 blog posts,
+    agentic AI product line) while keeping the server itself private. The gap
+    between the marketing surface and the callable surface is the finding.
+  related_blogs:
+  - https://artera.io/blog/mcp-explained-himss26-fireside-chat/
+  - https://artera.io/blog/model-context-protocol-explanation/

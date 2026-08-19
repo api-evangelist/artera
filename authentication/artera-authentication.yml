@@ -1,0 +1,70 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+docs: https://knowledge.artera.io/en_US/technical-specifications/saml-single-sign-on-setup-guide
+note: >-
+  Derived from Artera's public knowledge base only. No OpenAPI is published, so
+  there are no machine-readable securitySchemes to derive from — every scheme
+  below is stated in Artera's own documentation. Token URLs, scopes and grant
+  types are NOT published publicly; they sit behind the registration-gated
+  developer portal, so they are recorded as null rather than guessed.
+summary:
+  types:
+  - oauth2
+  - apiKey
+  - saml2
+  api_key_in:
+  - unknown
+  oauth2_flows:
+  - unknown
+  network_controls:
+  - ip-allowlist
+  - vpn
+schemes:
+- name: MAPI OAuth 2.0
+  type: oauth2
+  api: Artera Messaging API (MAPI)
+  description: >-
+    "MAPI leverages Auth 2.0" per Artera's Messaging API documentation. The
+    specific grant type, authorization and token URLs, and scope list are only
+    published inside the developer portal.
+  flows: null
+  authorization_url: null
+  token_url: null
+  scopes: null
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+- name: MAPI API key
+  type: apiKey
+  api: Artera Messaging API (MAPI)
+  description: >-
+    Onboarding requires the customer to supply API Keys alongside IP addresses.
+    The parameter name and location (header/query) are not published publicly.
+  in: unknown
+  parameter_name: null
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+- name: SAML 2.0 single sign-on
+  type: saml2
+  scope: Artera web application (not the API)
+  description: >-
+    SAML 2.0 SSO for staff users of the Artera web application, with MFA. Tracked
+    as its own component on the Artera status page.
+  docs: https://knowledge.artera.io/en_US/technical-specifications/saml-single-sign-on-setup-guide
+network_controls:
+- control: IP allowlisting
+  applies_to: Artera Messaging API (MAPI)
+  description: Customers supply the IP addresses that will call MAPI during implementation.
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+- control: Site-to-site VPN
+  applies_to: EHR/EMR data integration (HL7v2, extracts)
+  description: >-
+    Artera publishes VPN request forms for US and Canadian deployments as part of
+    its technical specification pack.
+  source: https://knowledge.artera.io/en_US/technical-specifications/1239793-technical-specifications
+gaps:
+- >-
+  No /.well-known/openid-configuration or /.well-known/oauth-authorization-server
+  is served on any Artera host (all probed 404) — the OAuth 2.0 metadata an agent
+  would use for automatic discovery does not exist publicly.
+- >-
+  No scope list is published, so scopes/artera-scopes.yml is intentionally absent
+  rather than fabricated.

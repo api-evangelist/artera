@@ -1,0 +1,54 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/1813492-artera-demo-environment
+note: >-
+  Artera publishes a demo environment, but it is a customer/staff demo of the web
+  application rather than a self-serve API sandbox. There are no test API keys, no
+  magic test phone numbers and no published test tokens — Artera explicitly tells
+  testers to use a real teammate's mobile number. Nothing below is invented; the
+  absence of test values IS the finding.
+sandbox:
+  available: true
+  kind: demo-environment
+  self_serve: false
+  url: https://demo-app.well-health-app.com/login/staff
+  access: >-
+    Work email required; first-time users create a password and verify via an
+    emailed confirmation link. Provisioned through Artera, not self-signup.
+  separation_from_production: >-
+    Demo and production are separate environments and are NOT synchronized.
+test_vs_live:
+  key_prefixes: null
+  mode_flag: null
+  note: >-
+    Artera publishes no test-vs-live key prefix or mode switch. MAPI credentials
+    are issued per environment during implementation — "Demo and Production
+    endpoints" are provided by Artera at that time and are not public.
+test_data:
+  patient_naming_rule: >-
+    Test patients created in the non-production EMR must have the last name
+    exactly "ZTest" to display correctly; other test patients are automatically
+    anonymized.
+  data_policy: fictitious data only
+  test_phone_numbers: null
+  test_phone_note: >-
+    No magic/reserved test numbers are published. Artera recommends using "the
+    phone number of someone on your team that will be assisting you with testing
+    in real-time" — meaning sandbox SMS sends to a real handset.
+  test_cards: null
+  test_card_note: not applicable — Artera is not a card acquirer
+time_simulation:
+  test_clocks: false
+fixtures_and_triggers:
+  tooling: null
+  note: >-
+    No fixture generator or event-trigger CLI is published. Test events are
+    produced by driving the demo web application or the non-production EMR feed.
+limitations:
+- Insights and Analytics Plus are not available in demo environments (production only)
+- New line/resource requests in demo carry a 14-day turnaround
+- Demo data does not sync with production
+coverage:
+  api_sandbox: false
+  app_demo: true
+  published_test_values: 0

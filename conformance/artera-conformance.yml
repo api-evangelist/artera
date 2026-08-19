@@ -1,0 +1,103 @@
+generated: '2026-08-15'
+method: searched
+source: https://artera.io/trust-center/
+note: >-
+  Standards and compliance posture asserted from Artera's own published trust
+  center, knowledge base and status page. No OpenAPI exists to derive protocol
+  conformance from, so every web-API-protocol entry below is marked unknown rather
+  than assumed. Certifications are carried in security/artera-trust-center.yml.
+standards:
+- id: hipaa
+  conforms: true
+  evidence: >-
+    Published HIPAA compliance; the platform is marketed as HIPAA-compliant
+    patient messaging.
+  source: https://artera.io/trust-center/
+- id: hitrust
+  conforms: true
+  evidence: HITRUST certification listed on the Artera trust center
+  source: https://artera.io/trust-center/
+- id: soc2-type2
+  conforms: true
+  evidence: SOC 2 Type 2 listed on the SafeBase trust center
+  source: https://safebase.artera.io/
+- id: iso-27001
+  conforms: true
+  evidence: ISO 27001 listed on the Artera trust center
+  source: https://artera.io/trust-center/
+- id: iso-27017
+  conforms: true
+  evidence: ISO 27017 listed on the Artera trust center
+  source: https://artera.io/trust-center/
+- id: iso-27018
+  conforms: true
+  evidence: ISO 27018 listed on the Artera trust center
+  source: https://artera.io/trust-center/
+- id: iso-27701
+  conforms: true
+  evidence: ISO 27701 listed on the SafeBase trust center
+  source: https://safebase.artera.io/
+- id: fedramp
+  conforms: true
+  evidence: >-
+    FedRAMP Class D certification announced for Artera Harmony Federal Edition.
+  source: https://artera.io/news/artera-achieves-fedramp-class-d-certification-for-artera-harmony-federal-edition
+- id: tcpa
+  conforms: partial
+  evidence: >-
+    Artera implements TCPA quiet-hours and Holiday Hours in the platform, but
+    explicitly does NOT apply them to messages sent through MAPI — the API caller
+    carries the compliance obligation.
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+- id: hl7v2
+  conforms: true
+  evidence: >-
+    Published HL7v2 interface specifications — appointment status writeback,
+    Orders (ORM), Recalls, REF referrals, and Z-segment definitions.
+  source: https://knowledge.artera.io/en_US/artera-foundation/hl7-appointment-status-writeback-specifications
+- id: fhir
+  conforms: claimed
+  evidence: >-
+    Artera markets "API, FHIR, and HL7v2 integrations" but publishes no FHIR
+    capability statement, no supported-resource list and no FHIR base URL. The
+    claim is recorded; it is not verifiable from the public surface.
+  source: https://artera.io/integrations/
+- id: saml2
+  conforms: true
+  evidence: Published SAML 2.0 single sign-on setup guide for the web application
+  source: https://knowledge.artera.io/en_US/technical-specifications/saml-single-sign-on-setup-guide
+- id: oauth2
+  conforms: claimed
+  evidence: >-
+    MAPI documentation states it "leverages Auth 2.0", but no authorization
+    server metadata is served (/.well-known/oauth-authorization-server 404 on every
+    host) and no flows, token URL or scopes are published.
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+- id: openapi
+  conforms: false
+  evidence: No OpenAPI or Swagger document is published at any public Artera URL
+- id: asyncapi
+  conforms: false
+  evidence: No AsyncAPI document published; webhooks documented in prose only
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: error envelope shape not published
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on every Artera host
+- id: rfc8594-sunset-header
+  conforms: unknown
+  evidence: no deprecation or Sunset header policy published
+- id: mcp
+  conforms: partial
+  evidence: >-
+    Artera operates an MCP server but states it is not publicly available on the
+    internet, so conformance cannot be observed.
+  source: https://artera.io/blog/model-context-protocol-explanation/
+- id: a2a
+  conforms: false
+  evidence: no agent card served at /.well-known/agent-card.json or /.well-known/agent.json on any host
+summary:
+  verified_certifications: 8
+  protocol_standards_verifiable: 2
+  protocol_standards_claimed_unverifiable: 2

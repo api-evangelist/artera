@@ -1,0 +1,75 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+note: >-
+  Cross-cutting semantics captured from Artera's public knowledge base. Artera
+  publishes no OpenAPI, so nothing here is derived from a spec. Where a
+  convention is not published it is recorded as null with a reason — NOT filled
+  in from a sibling API or a plausible default. In particular no idempotency
+  contract is documented anywhere on Artera's public surface, so no Idempotency
+  pointer is emitted in apis.yml.
+authentication:
+  style: oauth2 + api-key, with IP allowlisting
+  detail: authentication/artera-authentication.yml
+idempotency:
+  supported: unknown
+  header: null
+  scope: null
+  retention: null
+  evidence: >-
+    No idempotency key, retry-safety statement, or duplicate-suppression contract
+    appears anywhere in Artera's public documentation. MAPI sends SMS in real time
+    with no scheduling, which makes retry semantics consequential, but Artera does
+    not publish them. Recorded as unknown, not as absent.
+pagination:
+  style: null
+  reason: no public reference documents any list operation
+field_expansion:
+  supported: null
+  reason: not published
+metadata:
+  supported: null
+  reason: not published
+request_tracing:
+  request_id_header: null
+  reason: not published
+versioning:
+  scheme: null
+  current: null
+  reason: >-
+    No API version appears in any public Artera documentation. The developer
+    portal specification is addressed by an opaque UUID
+    (0dbfeef0-de7e-4dee-8435-09c5cffd7ed1) rather than a version.
+  detail: lifecycle/artera-lifecycle.yml
+error_envelope:
+  format: unknown
+  known_shape: >-
+    Artera documents one concrete failure publicly — "HTTP 400 with the message
+    'Invalid phone number'" — which indicates a message-bearing JSON body, but the
+    envelope field names are not published.
+  detail: errors/artera-problem-types.yml
+rate_limit_signaling:
+  headers: null
+  status_on_exhaustion: null
+  reason: no published API rate limits
+  detail: rate-limits/artera-rate-limits.yml
+message_semantics:
+  channel: SMS only via MAPI (not voice, not email)
+  scheduling: not supported — MAPI delivers in real time, no advance scheduling
+  url_handling: URLs are permitted and automatically shortened
+  merged_messaging: not supported through MAPI
+  compliance_windows: >-
+    MAPI does NOT apply Artera's TCPA quiet-hours or Holiday Hours adjustments —
+    the caller is responsible for send-time compliance.
+  smart_phrases: >-
+    Extended Data API partners inject content through named Smart Phrase tokens
+    ({eventPartnerPreCheckIn}, {eventPartnerPostApptRx}, {eventPartnerRescheduling},
+    {eventPartnerTelehealth}, {eventPartnerCheckIn}, {dischargePartnerRx}); missing
+    data renders blank and the message still sends.
+  source: https://knowledge.artera.io/en_US/marketplace/extended-data-api-appointments-and-encounters
+cross_links:
+  authentication: authentication/artera-authentication.yml
+  errors: errors/artera-problem-types.yml
+  lifecycle: lifecycle/artera-lifecycle.yml
+  rate_limits: rate-limits/artera-rate-limits.yml
+  webhooks: asyncapi/artera-webhooks.yml

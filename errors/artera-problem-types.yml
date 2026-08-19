@@ -1,0 +1,27 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+format: unknown
+note: >-
+  Artera publishes no OpenAPI, so no 4xx/5xx responses can be derived. This
+  catalog carries only the errors Artera states verbatim in its public knowledge
+  base. It is deliberately thin: one documented error is the honest total of
+  Artera's public error surface. The full error reference sits behind the
+  registration-gated developer portal at https://apidocs.artera.io/login.
+problems:
+- status: 400
+  title: Invalid phone number
+  detail: >-
+    Returned by the Messaging API (MAPI) when the destination number is a landline
+    or otherwise non-textable.
+  remediation: >-
+    Validate the destination number is SMS-capable before sending; MAPI does not
+    fall back to voice or email.
+  api: Artera Messaging API (MAPI)
+  quoted: HTTP 400 with the message "Invalid phone number"
+  source: https://knowledge.artera.io/en_US/use-cases-and-add-ons/messaging-api-mapi
+coverage:
+  problems_documented: 1
+  rfc9457: false
+  error_reference_public: false
+  error_reference_url: https://apidocs.artera.io/login

@@ -1,0 +1,90 @@
+generated: '2026-08-15'
+method: searched
+source: https://knowledge.artera.io/en_US/release-notes/2026-releases
+note: >-
+  Artera publishes a genuinely dated, continuously updated release-note stream in
+  its public knowledge base, with archives back to 2022 and a separate stream for
+  Artera Harmony Federal Edition. Entries are product-level, not API-versioned.
+  Only the recent window is captured here; the live page is the source of truth.
+scheme: dated-entries
+versioned: false
+current_version: null
+cadence: near-daily
+public: true
+url: https://knowledge.artera.io/en_US/release-notes/2026-releases
+archives:
+- year: 2025
+  url: https://knowledge.artera.io/en_US/release-notes/2025-releases
+- year: 2024
+  url: https://knowledge.artera.io/en_US/release-notes/2024-releases
+- year: 2023
+  url: https://knowledge.artera.io/en_US/release-notes/2023releases
+- year: 2022
+  url: https://knowledge.artera.io/en_US/release-notes/2022-releases
+streams:
+- name: Artera Harmony (commercial)
+  url: https://knowledge.artera.io/en_US/release-notes/2026-releases
+- name: Artera Harmony Federal Edition
+  url: https://knowledge.artera.io/en_US/release-notes-artera-harmony-federal-edition/2026-releases-artera-harmony-federal-edition
+entries:
+- date: '2026-08-13'
+  breaking: false
+  type: change
+  highlights:
+  - '"SMS Timeout" field renamed to "Response Timeout" to cover both SMS and voice flows'
+- date: '2026-08-07'
+  breaking: false
+  type: fix
+  highlights:
+  - Prevented enterprise-level blocking of inbound patient attachments (MMS)
+- date: '2026-08-04'
+  breaking: false
+  type: addition
+  highlights:
+  - Conversation Flows can end on Actions without sending a patient message
+  - Login attempt rate-limiting added with a countdown timer
+- date: '2026-07-23'
+  breaking: false
+  type: addition
+  highlights:
+  - Inbound patient attachments can now be blocked at enterprise level (support case required)
+- date: '2026-07-16'
+  breaking: false
+  type: addition
+  highlights:
+  - New Smart Phrase "{eventPatientTimezone}"
+- date: '2026-06-22'
+  breaking: true
+  type: deprecation
+  highlights:
+  - Default mass-messaging number changed from legacy short code 81906 to toll-free +1 (833) 868-5302
+- date: '2026-03-12'
+  breaking: false
+  type: addition
+  api_relevant: true
+  highlights:
+  - New Smart Phrases "{eventPartnerTelehealth}" and "{eventPartnerCheckIn}" available to Extended Data API customers
+- date: '2026-03-03'
+  breaking: true
+  type: deprecation
+  highlights:
+  - Legacy Inbox URLs deprecated; users directed to https://app.wellapp.com/inbox/all-messages
+- date: '2026-01-28'
+  breaking: false
+  type: change
+  highlights:
+  - Artera demo environment now requires an email address and password
+- date: '2026-01-23'
+  breaking: false
+  type: fix
+  api_relevant: true
+  highlights:
+  - Fixed Partner Smart Phrases rendering in manual messaging for Extended Data API customers
+coverage:
+  entries_captured: 10
+  window: 2026-01-23 to 2026-08-13
+  api_specific_entries: 3
+  note: >-
+    Release notes are overwhelmingly web-application changes. Only three entries
+    in the captured window touch the API surface, all of them Extended Data API
+    Smart Phrases. Artera publishes no separate API changelog.

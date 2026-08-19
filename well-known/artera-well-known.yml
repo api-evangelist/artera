@@ -1,0 +1,90 @@
+generated: '2026-08-15'
+method: probed
+source: live HTTP probes of every Artera host found in apis.yml and contract discovery
+note: >-
+  Every /.well-known/ path probed returned 404 on artera.io, api.artera.io and
+  knowledge.artera.io. The developer-portal host apidocs.artera.app answers HTTP
+  200 for EVERY path with an identical 3,759-byte single-page-app HTML shell
+  (content-type text/html), including /.well-known/agent-card.json, /llms.txt and
+  /robots.txt — that is an SPA catch-all, NOT a served document, and is recorded
+  as a miss. No WellKnown or SecurityTxt pointer is emitted in apis.yml because
+  Artera serves no document at any well-known path.
+hosts:
+- host: https://artera.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.artera.io
+  note: live API gateway (Express behind istio-envoy); GET /health returns 200 {"status":"ok"}
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://knowledge.artera.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /robots.txt
+    status: 200
+    file: null
+    note: served but zero bytes
+  - path: /sitemap.xml
+    status: 200
+    file: null
+    note: real 26,541-byte sitemap listing 258 knowledge-base URLs; not a well-known document
+- host: https://apidocs.artera.app
+  note: >-
+    Developer-portal SPA. Reached only via an http:// redirect from
+    apidocs.artera.io, whose TLS certificate expired 2026-01-27.
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA shell (text/html, 3759 bytes) — rejected, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA shell (text/html, 3759 bytes) — rejected, not a document
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA shell (text/html, 3759 bytes) — rejected, not a document
+  - path: /openapi.json
+    status: 200
+    file: null
+    note: SPA shell (text/html, 3759 bytes) — rejected, not an OpenAPI document
+summary:
+  documents_served: 0
+  hosts_probed: 4
+  paths_probed: 26
+  well_known_pointer_emitted: false
+  security_txt_pointer_emitted: false

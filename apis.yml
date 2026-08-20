@@ -68,6 +68,12 @@ apis:
   - SMS
   - Patient Communication
   - Healthcare
+  - Webhook
+  tags_raw:
+  - Messaging
+  - SMS
+  - Patient Communication
+  - Healthcare
   - Webhooks
   properties:
   - type: Documentation

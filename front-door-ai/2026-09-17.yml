@@ -1,0 +1,33 @@
+# Front Door AI Index — artera — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: artera
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: artera.io
+  final_host: artera.io
+  ownership: own
+  owner: artera
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 96
+  host_score: 96
+  density: 43.82
+  words: 2191
+  tiers:
+    agentic: 38
+    core: 58
+    model: 0
+  ambiguous: 35
+  top_terms:
+    AI: 58
+    agent: 33
+    AI agent: 23
+    agentic: 12
+    MCP: 1
+    automation: 1
+    intelligence: 1
+    prompts: 1
+    virtual assistant: 1

@@ -56,6 +56,15 @@ tags:
 - Health IT
 - EHR Integration
 - FHIR
+- AI Agents
+tags_raw:
+- Company
+- Healthcare
+- Patient Communication
+- Patient Engagement
+- Health IT
+- EHR Integration
+- FHIR
 - Agentic AI
 apis:
 - name: Artera Messaging API (MAPI)

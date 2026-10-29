@@ -64,6 +64,119 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Artera is a company surfaced as a portfolio company of techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Artera is a healthcare technology company providing an AI-powered patient communication and engagement platform used by hospitals, health systems, and medical practices to unify how they reach and care for patients. The platform orchestrates SMS, voice, email, and chat across the patient journey — appointment scheduling and reminders, patient intake, payments, referral management, care-gap closure, prescription refills, multilingual engagement, and after-hours call routing and triage — increasingly through agentic AI. Artera connects to the EHR and patient-facing vendors via API, FHIR, and HL7v2 integrations with major systems including Epic, Oracle Health, MEDITECH, athenahealth, eClinicalWorks, Veradigm, NextGen, Greenway, ModMed, AdvancedMD, and Netsmart. The company maintains a strong security and compliance posture (SOC 2 Type 2, HITRUST, ISO 27001/27017/27018/27701, FedRAMP, HIPAA). It was surfaced as a Techstars portfolio company and added to the API Evangelist network.
 
-Backed by: techstars — https://artera.io/
+**Areas:** Company · Healthcare · Patient Communication · Patient Engagement · Health IT · EHR Integration · FHIR · AI Agents
+
+## Artera on APIs.io
+
+Everything profiled for Artera is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/artera/](https://apis.io/providers/artera/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Artera Messaging API (MAPI)](https://apis.io/apis/artera/artera-messaging-api-mapi/) — Artera's outbound SMS API, marketed to health systems and Artera Marketplace vendors as the SendMessage API. It sends real-time text messages to patients…
+- [Artera Extended Data API](https://apis.io/apis/artera/artera-extended-data-api/) — A Marketplace-vendor API that attaches custom partner content to a patient's upcoming or past appointment or encounter, including post-discharge content.…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Artera Webhooks](https://apis.io/asyncapis/artera/artera-webhooks/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Artera Authentication](https://apis.io/security/artera/artera-authentication/)
+- [Artera Domain Security](https://apis.io/security/artera/artera-domain-security/)
+- [Artera Trust Center](https://apis.io/security/artera/artera-trust-center/)
+- [Artera Vulnerability Disclosure](https://apis.io/security/artera/artera-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Artera Plans Pricing](https://apis.io/plans/artera/artera-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Artera Rate Limits](https://apis.io/rate-limits/artera/artera-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://artera.io/)
+- [Documentation](https://knowledge.artera.io/)
+- [Getting started](https://knowledge.artera.io/en_US/get-started)
+- [API reference](https://apidocs.artera.io/docs/0dbfeef0-de7e-4dee-8435-09c5cffd7ed1/specification)
+- [Sign up](https://artera.io/request-a-demo/)
+- [Support](https://artera.io/contact-us/)
+- [Blog](https://artera.io/blog/)
+- [Security](https://artera.io/vulnerability-disclosure/)
+- [Compliance](https://artera.io/trust-center/)
+- [Trust centre](https://safebase.artera.io/)
+- [Terms of service](https://artera.io/terms-of-service/)
+- [Privacy policy](https://artera.io/privacy-policy/)
+- [Status](https://status.artera.io/)
+
+## API Evangelist rating
+
+**Kin Score 50.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 57.9 |
+| Developer ergonomics | 56.0 |
+| Access clarity | 50.0 |
+
+**Agent readiness 25.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 28.1** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/artera/](https://apis.io/providers/artera/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Artera: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/artera/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
